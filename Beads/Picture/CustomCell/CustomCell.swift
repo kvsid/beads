@@ -19,6 +19,5 @@ class CustomCell: UICollectionViewCell {
     
     func configure(color: UIColor? = UIColor.red) {
         cellView.backgroundColor = color
-        cellView.reloadInputViews()
     }
 }
