@@ -7,17 +7,18 @@
 
 import UIKit
 
-class CustomCell: UITableViewCell {
+class CustomCell: UICollectionViewCell {
 
     @IBOutlet weak var cellView: UIView!
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         cellView.layer.borderColor = UIColor.black.cgColor
-        cellView.layer.borderWidth = 2
+        cellView.layer.borderWidth = 1
     }
     
     func configure(color: UIColor? = UIColor.red) {
-        
+        cellView.backgroundColor = color
+        cellView.reloadInputViews()
     }
 }

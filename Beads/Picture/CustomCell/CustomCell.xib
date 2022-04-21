@@ -4,55 +4,44 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomCell" customModule="Beads" customModuleProvider="target"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="CustomCell" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="CustomCell" rowHeight="74" id="s6l-me-al0" customClass="CustomCell" customModule="Beads" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="111" height="74"/>
-            <autoresizingMask key="autoresizingMask"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="s6l-me-al0" id="ZBB-dk-7QY">
-                <rect key="frame" x="0.0" y="0.0" width="111" height="74"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="CustomCell" id="KVx-g1-elV" customClass="CustomCell" customModule="Beads" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="169" height="282"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="rcx-wS-vdO">
+                <rect key="frame" x="0.0" y="0.0" width="169" height="282"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kqA-3D-ATU">
-                        <rect key="frame" x="0.0" y="0.0" width="10" height="20"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2zS-AY-y6U">
-                                <rect key="frame" x="0.0" y="0.0" width="10" height="20"/>
-                                <color key="backgroundColor" systemColor="systemYellowColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="2zS-AY-y6U" secondAttribute="height" multiplier="1:2" id="Da2-sR-eW6"/>
-                                </constraints>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T3E-je-Epi">
+                        <rect key="frame" x="0.0" y="0.0" width="169" height="253.5"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
-                            <constraint firstItem="2zS-AY-y6U" firstAttribute="leading" secondItem="kqA-3D-ATU" secondAttribute="leading" id="9c8-K2-ohD"/>
-                            <constraint firstAttribute="height" constant="20" id="J6B-8b-pd5"/>
-                            <constraint firstAttribute="trailing" secondItem="2zS-AY-y6U" secondAttribute="trailing" id="qde-N0-Dpk"/>
-                            <constraint firstItem="2zS-AY-y6U" firstAttribute="top" secondItem="kqA-3D-ATU" secondAttribute="top" id="y0j-yE-b9C"/>
-                            <constraint firstAttribute="bottom" secondItem="2zS-AY-y6U" secondAttribute="bottom" id="ywX-bz-5jN"/>
+                            <constraint firstAttribute="width" secondItem="T3E-je-Epi" secondAttribute="height" multiplier="10:15" id="a2O-6C-Aek"/>
                         </constraints>
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="kqA-3D-ATU" secondAttribute="trailing" id="PBx-sr-2qg"/>
-                    <constraint firstItem="kqA-3D-ATU" firstAttribute="top" secondItem="ZBB-dk-7QY" secondAttribute="top" id="Tu7-ez-OkK"/>
-                    <constraint firstItem="kqA-3D-ATU" firstAttribute="leading" secondItem="ZBB-dk-7QY" secondAttribute="leading" id="Yj9-Hi-xWH"/>
-                    <constraint firstAttribute="bottom" secondItem="kqA-3D-ATU" secondAttribute="bottom" id="b41-bS-kVV"/>
+                    <constraint firstItem="T3E-je-Epi" firstAttribute="top" secondItem="rcx-wS-vdO" secondAttribute="top" id="D9u-Mi-ZQf"/>
+                    <constraint firstAttribute="trailing" secondItem="T3E-je-Epi" secondAttribute="trailing" id="g4l-EE-Apw"/>
+                    <constraint firstItem="T3E-je-Epi" firstAttribute="leading" secondItem="rcx-wS-vdO" secondAttribute="leading" id="hVj-To-nGA"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="T3E-je-Epi" secondAttribute="bottom" id="in7-hI-HR4"/>
                 </constraints>
-            </tableViewCellContentView>
+            </collectionViewCellContentView>
+            <size key="customSize" width="169" height="282"/>
             <connections>
-                <outlet property="cellView" destination="2zS-AY-y6U" id="FpL-HP-Mzk"/>
+                <outlet property="cellView" destination="T3E-je-Epi" id="15c-Ot-TSh"/>
             </connections>
-            <point key="canvasLocation" x="26.811594202898554" y="144.64285714285714"/>
-        </tableViewCell>
+            <point key="canvasLocation" x="-43" y="102"/>
+        </collectionViewCell>
     </objects>
     <resources>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
