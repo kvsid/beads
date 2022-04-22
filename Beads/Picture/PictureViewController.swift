@@ -10,8 +10,10 @@ import UIKit
 class PictureViewController: UIViewController {
 
     @IBOutlet weak var schemeCollectionView: UICollectionView!
+    @IBOutlet weak var paletteButton: UIButton!
 
     let reuseIdentifier = "CustomCell"
+    var cellColor = UIColor.white
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +22,11 @@ class PictureViewController: UIViewController {
         schemeCollectionView.dataSource = self
         schemeCollectionView.register(UINib(nibName: "CustomCell", bundle: nil), forCellWithReuseIdentifier: "CustomCell")
 
+    }
+    @IBAction func paletteButtonPressed(_ sender: UIButton) {
+        let colorPickerVC = UIColorPickerViewController()
+        colorPickerVC.delegate = self
+        present(colorPickerVC, animated: true)
     }
 }
 
@@ -43,6 +50,21 @@ extension PictureViewController: UICollectionViewDelegate, UICollectionViewDataS
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
       let cell = collectionView.cellForItem(at: indexPath) as! CustomCell
-        cell.configure()
+        cell.configure(color: cellColor)
+    }
+
+    
+}
+
+extension PictureViewController: UIColorPickerViewControllerDelegate {
+
+    func colorPickerViewControllerDidFinish(_ viewController: UIColorPickerViewController) {
+ //       let color = viewController.selectedColor
+     //   cellColor = color
+    }
+
+    func colorPickerViewController(_ viewController: UIColorPickerViewController, didSelect color: UIColor, continuously: Bool) {
+        let color = viewController.selectedColor
+        cellColor = color
     }
 }
