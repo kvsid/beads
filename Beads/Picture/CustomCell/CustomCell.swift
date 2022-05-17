@@ -12,9 +12,11 @@ class CustomCell: UICollectionViewCell {
     @IBOutlet weak var cellView: UIView!
 
     override func awakeFromNib() {
-        super.awakeFromNib()
-//        cellView.layer.borderColor = UIColor.black.cgColor
-//        cellView.layer.borderWidth = 1
+      super.awakeFromNib()
+      layer.borderColor = UIColor.black.cgColor
+      layer.borderWidth = 1
+      layer.cornerRadius = CGFloat(15.0)
+      
 
 //        let gradientLayer:CAGradientLayer = CAGradientLayer()
 //        gradientLayer.frame = cellView.bounds
